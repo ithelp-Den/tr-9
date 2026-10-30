@@ -254,8 +254,10 @@ h1, h2, h3, h4, span {
 
 .hero__price-old {
   position: absolute;
-  left: 4.23rem;
+  left: 0;
+  right: 0;
   top: 8.28rem;
+  text-align: center;
   font-family: "Anton", sans-serif;
   font-size: 3.4rem;
   line-height: 3.4rem;
@@ -264,13 +266,12 @@ h1, h2, h3, h4, span {
 
 .hero__price-strike {
   position: absolute;
-  left: 3.06rem;
-  top: 10.63rem;
+  left: 50%;
+  top: 9.9rem;
   width: 11.4rem;
   height: 0.2rem;
   background: #ff0000;
-  transform: rotate(-11.23deg);
-  transform-origin: left center;
+  transform: translateX(-50%) rotate(-11.23deg);
 }
 
 .hero__photo {
@@ -1013,6 +1014,16 @@ h1, h2, h3, h4, span {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.18);
+}
+
+/* Скріни зі своєю сірою рамкою: не обрізаємо кути і не додаємо тінь */
+.review-slide--framed {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.review-slide--framed img {
+  object-fit: contain;
 }
 
 .review-slide img {
